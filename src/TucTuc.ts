@@ -14,7 +14,5 @@ export class TucTuc extends Vehicle{
             remainSpeed = maxSpeed - passenger;
         }
         return remainSpeed;
-        
-        
     }
 }
