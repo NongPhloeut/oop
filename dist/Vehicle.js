@@ -6,8 +6,6 @@ var Vehicle = /** @class */ (function () {
         this.plateID = plateID;
         this.weight = weight;
     }
-    Vehicle.prototype.getSpeed = function () { };
-    ;
     return Vehicle;
 }());
 exports.Vehicle = Vehicle;

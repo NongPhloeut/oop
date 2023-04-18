@@ -24,6 +24,16 @@ var BatMobile = /** @class */ (function (_super) {
         _this.isBatmanHere = isBatman;
         return _this;
     }
+    BatMobile.prototype.getSpeed = function () {
+        var speed = 0;
+        if (this.isBatmanHere) {
+            speed = 500;
+        }
+        else {
+            speed = 110;
+        }
+        return speed;
+    };
     return BatMobile;
 }(Vehicle_1.Vehicle));
 exports.BatMobile = BatMobile;

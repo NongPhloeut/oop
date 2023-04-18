@@ -10,6 +10,7 @@ export class TucTuc extends Vehicle{
         let remainSpeed = 0;
         let maxSpeed = 130;
         let passenger = this.numberCustomers * 5;
+        
         if(passenger < maxSpeed){
             remainSpeed = maxSpeed - passenger;
         }

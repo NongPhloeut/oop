@@ -24,6 +24,15 @@ var TucTuc = /** @class */ (function (_super) {
         _this.numberCustomers = numberCustomers;
         return _this;
     }
+    TucTuc.prototype.getSpeed = function () {
+        var remainSpeed = 0;
+        var maxSpeed = 130;
+        var passenger = this.numberCustomers * 5;
+        if (passenger < maxSpeed) {
+            remainSpeed = maxSpeed - passenger;
+        }
+        return remainSpeed;
+    };
     return TucTuc;
 }(Vehicle_1.Vehicle));
 exports.TucTuc = TucTuc;
