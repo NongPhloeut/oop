@@ -6,9 +6,6 @@ export class TucTuc extends Vehicle{
         super(plateID, weight)
         this.numberCustomers = numberCustomers
     }   
-    getSpeed(): void {
-        throw new Error("Method not implemented.");
-    }
     getSpeed(): number {
         let remainSpeed = 0;
         let maxSpeed = 130;
