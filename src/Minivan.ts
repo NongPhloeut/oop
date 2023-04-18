@@ -8,7 +8,16 @@ export class MiniVan extends Vehicle{
         this.numberCustomer = numberCustomer;
         this.numberLuggages = numberLuggage;
     } 
-    getSpeed(): void {
-        throw new Error("Method not implemented.");
+    getSpeed(): number {
+
+        let speed = 130;
+        
+        let customer =  this.numberCustomer * 10;
+        let luggage = this.numberLuggages * 5;
+        if(this.numberCustomer >0 && this.numberLuggages>0 && speed>0){
+            speed -= customer;
+            speed -= luggage;
+        }
+        return speed;
     }
 }

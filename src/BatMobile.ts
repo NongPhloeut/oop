@@ -7,7 +7,13 @@ export class BatMobile extends Vehicle {
         super(plateID,weight)
         this.isBatmanHere = isBatman;
     } 
-    getSpeed(): void {
-        throw new Error("Method not implemented.");
+    getSpeed(): number {
+        let speed = 0;
+        if(this.isBatmanHere){
+            speed = 500;
+        }else{
+            speed = 110;
+        }
+        return speed;
     }
 }
