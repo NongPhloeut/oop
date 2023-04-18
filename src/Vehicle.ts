@@ -6,5 +6,5 @@
         this.weight = weight;
     }
 
-    abstract getSpeed():void;
+    abstract getSpeed():number;
 }

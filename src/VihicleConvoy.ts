@@ -1,19 +1,17 @@
-import { BatMobile } from "./BatMobile";
-import { MiniVan } from "./Minivan";
-import { TucTuc } from "./TucTuc";
 import { Vehicle } from "./Vehicle";
 
 export class VehicleConvoy {
-    vechicles:Vehicle[]=[];
+    vehicles:Vehicle[]=[];
+
     addVehicle(vechicle:Vehicle) {
-      return  this.vechicles.push(vechicle);
+      return  this.vehicles.push(vechicle);
     }
 
-    getMaxSpeed(): void {
-        let firstSpeed = this.vechicles[0].getSpeed();
+    getMaxSpeed(): number {
+        let firstSpeed = this.vehicles[0].getSpeed();
 
-        this.vechicles.forEach(element => {
-            if(element.getSpeed() > firstSpeed){
+        this.vehicles.forEach(element => {
+            if(element.getSpeed() < firstSpeed){
                firstSpeed = element.getSpeed();
             }
             
@@ -21,4 +19,7 @@ export class VehicleConvoy {
         
         return firstSpeed;
     }
+
+
+
 }
