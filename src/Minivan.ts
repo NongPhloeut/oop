@@ -13,17 +13,15 @@ export class MiniVan extends Vehicle{
         
     // }
     getSpeed(): number {
-        let speed = 130;
-        let decreased = 0;
-        let passenger = this.numberCustomer * 10;
-        let luggage = this.numberLuggages * 5;
-        if (decreased < speed){
-            decreased = speed - passenger;
-        }
-        else if(decreased < speed){
-            decreased = speed - luggage;
-        }
-        return decreased;
 
+        let speed = 130;
+        
+        let customer =  this.numberCustomer * 10;
+        let luggage = this.numberLuggages * 5;
+        if(this.numberCustomer >0 && this.numberLuggages>0 && speed>0){
+            speed -= customer;
+            speed -= luggage;
+        }
+        return speed;
     }
 }
